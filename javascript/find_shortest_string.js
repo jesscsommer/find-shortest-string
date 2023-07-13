@@ -4,16 +4,14 @@ function findShortestString(arr) {
     return arr[0]
   }
 
-  let shortest = arr[0].length
-  let result = ""
+  let shortest = arr[0]
   for (let elem of arr) {
-    if (elem.length < shortest) {
-      shortest = elem.length
-      result = elem
+    if (elem.length < shortest.length) {
+      shortest = elem
     }
   }
 
-  return result
+  return shortest
 
 }
 
