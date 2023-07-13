@@ -1,5 +1,20 @@
 function findShortestString(arr) {
   // type your code here
+  if (arr.length === 1) {
+    return arr[0]
+  }
+
+  let shortest = arr[0].length
+  let result = ""
+  for (let elem of arr) {
+    if (elem.length < shortest) {
+      shortest = elem.length
+      result = elem
+    }
+  }
+
+  return result
+
 }
 
 if (require.main === module) {
@@ -24,3 +39,7 @@ module.exports = findShortestString;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+
+// shortest string
+// if more than one string of that short length : first string with that length
+// arr will be at least 1 item => if only 1 item, return that string 
